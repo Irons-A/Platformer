@@ -1,0 +1,703 @@
+fileFormatVersion: 2
+guid: e2f993bec2fdfda489d10cda118ee589
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: connor-baker-mortlock-sprites-3.jpg_0
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 900
+        width: 126
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2674cc83ba8bf90458dd5f84773f539d
+      internalID: 988818511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: connor-baker-mortlock-sprites-3.jpg_1
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 900
+        width: 126
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dc2dbe25463c314e84d893b40154afe
+      internalID: 371553788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: connor-baker-mortlock-sprites-3.jpg_2
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 900
+        width: 126
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56aea1b2a1be43649bd9967a9c0535f6
+      internalID: -220160185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: connor-baker-mortlock-sprites-3.jpg_3
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 900
+        width: 126
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c34d14c6325273c42ae22e2391243dec
+      internalID: 223333588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: connor-baker-mortlock-sprites-3.jpg_4
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 924
+        width: 150
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4ed57d7ba7313144885bc65dbf5b89f
+      internalID: 1467220388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: connor-baker-mortlock-sprites-3.jpg_5
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 924
+        width: 168
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1bb16e754a3fb74bb6ec34d6a38c669
+      internalID: -715372170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: connor-baker-mortlock-sprites-3.jpg_6
+      rect:
+        serializedVersion: 2
+        x: 1164
+        y: 924
+        width: 132
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d901ac19e36bb7a4b88d892e362c3e24
+      internalID: 186087475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: connor-baker-mortlock-sprites-3.jpg_7
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 900
+        width: 150
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 322154bd024ad2c4386ec07f24af25ee
+      internalID: 1296367002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: connor-baker-mortlock-sprites-3.jpg_8
+      rect:
+        serializedVersion: 2
+        x: 1566
+        y: 900
+        width: 138
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 733d928241f91854abb581b0fe21c48e
+      internalID: 1833833658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: connor-baker-mortlock-sprites-3.jpg_9
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 516
+        width: 150
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65d2297dec5c04c44b9765aa4e5d7889
+      internalID: -2123572880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: connor-baker-mortlock-sprites-3.jpg_10
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 522
+        width: 162
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bee420ed32e91f45be78211caf539b1
+      internalID: -1410013784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: connor-baker-mortlock-sprites-3.jpg_11
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 516
+        width: 162
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec5a126e53e686943a6cb163148b3ed9
+      internalID: 1405055029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: connor-baker-mortlock-sprites-3.jpg_12
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 516
+        width: 150
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 480207c3697140b4697f25dfcb1287a1
+      internalID: -1873520256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: connor-baker-mortlock-sprites-3.jpg_13
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 516
+        width: 108
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68eaaf14295c7214c9eeac2a3cf9e4f9
+      internalID: 844518835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: connor-baker-mortlock-sprites-3.jpg_14
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 522
+        width: 150
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 901497263a3202a4e8179e1b9a441245
+      internalID: 1125885241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: connor-baker-mortlock-sprites-3.jpg_15
+      rect:
+        serializedVersion: 2
+        x: 1176
+        y: 516
+        width: 144
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5522ef8b9698544989f81f7a4a91dba
+      internalID: 586927571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: connor-baker-mortlock-sprites-3.jpg_16
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 516
+        width: 108
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4699a2bfb731564ab6354f739247fbf
+      internalID: -909433008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: connor-baker-mortlock-sprites-3.jpg_17
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 540
+        width: 150
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2407df19b7fbe849bec3acff47c42d4
+      internalID: 1850347962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: connor-baker-mortlock-sprites-3.jpg_18
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 156
+        width: 150
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8eb39ac789372b4ebdd97753060a33a
+      internalID: -530152739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: connor-baker-mortlock-sprites-3.jpg_19
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 156
+        width: 168
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d36f2b939cf28f4095ac2918402b6ce
+      internalID: -1364928324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: connor-baker-mortlock-sprites-3.jpg_20
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 156
+        width: 168
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f391cda8d01e8244f94bd72bec771baf
+      internalID: 1939586731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: connor-baker-mortlock-sprites-3.jpg_21
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 156
+        width: 168
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15a49fd5a79c1e64599d64136b0d7292
+      internalID: 824669792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: connor-baker-mortlock-sprites-3.jpg_22
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 156
+        width: 168
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e02885e7b1251fe4dab592dbb47fbc0b
+      internalID: 649752799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: connor-baker-mortlock-sprites-3.jpg_23
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 156
+        width: 168
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03456b65056a69547a397140722aee07
+      internalID: 1517817596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: connor-baker-mortlock-sprites-3.jpg_24
+      rect:
+        serializedVersion: 2
+        x: 1158
+        y: 156
+        width: 168
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d80d0cd22549fd4da80e257a369f256
+      internalID: -2001780036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      connor-baker-mortlock-sprites-3.jpg_0: 988818511
+      connor-baker-mortlock-sprites-3.jpg_1: 371553788
+      connor-baker-mortlock-sprites-3.jpg_10: -1410013784
+      connor-baker-mortlock-sprites-3.jpg_11: 1405055029
+      connor-baker-mortlock-sprites-3.jpg_12: -1873520256
+      connor-baker-mortlock-sprites-3.jpg_13: 844518835
+      connor-baker-mortlock-sprites-3.jpg_14: 1125885241
+      connor-baker-mortlock-sprites-3.jpg_15: 586927571
+      connor-baker-mortlock-sprites-3.jpg_16: -909433008
+      connor-baker-mortlock-sprites-3.jpg_17: 1850347962
+      connor-baker-mortlock-sprites-3.jpg_18: -530152739
+      connor-baker-mortlock-sprites-3.jpg_19: -1364928324
+      connor-baker-mortlock-sprites-3.jpg_2: -220160185
+      connor-baker-mortlock-sprites-3.jpg_20: 1939586731
+      connor-baker-mortlock-sprites-3.jpg_21: 824669792
+      connor-baker-mortlock-sprites-3.jpg_22: 649752799
+      connor-baker-mortlock-sprites-3.jpg_23: 1517817596
+      connor-baker-mortlock-sprites-3.jpg_24: -2001780036
+      connor-baker-mortlock-sprites-3.jpg_3: 223333588
+      connor-baker-mortlock-sprites-3.jpg_4: 1467220388
+      connor-baker-mortlock-sprites-3.jpg_5: -715372170
+      connor-baker-mortlock-sprites-3.jpg_6: 186087475
+      connor-baker-mortlock-sprites-3.jpg_7: 1296367002
+      connor-baker-mortlock-sprites-3.jpg_8: 1833833658
+      connor-baker-mortlock-sprites-3.jpg_9: -2123572880
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
