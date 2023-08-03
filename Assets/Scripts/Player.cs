@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+
+[RequireComponent(typeof(Rigidbody2D))]
 
 public class Player : MonoBehaviour
 {
@@ -10,6 +13,9 @@ public class Player : MonoBehaviour
     [SerializeField] private int _coins;
     private float _speed = 5f;
     private float _jumpStrength = 8f;
+    private float _runningAnimationThreshhold = 0.02f;
+    private int RunBoolHash = Animator.StringToHash("isRunning");
+    private int JumpTriggerHash = Animator.StringToHash("Jump");
 
 
     private void Start()
@@ -29,13 +35,13 @@ public class Player : MonoBehaviour
     {
         _rigidBody2d.AddForce(transform.right * _speed * Input.GetAxis("Horizontal"), ForceMode2D.Force);
 
-        if (_rigidBody2d.velocity.magnitude > 0.02)
+        if (_rigidBody2d.velocity.magnitude > _runningAnimationThreshhold)
         {
-            _animator.SetBool("isRunning", true);
+            _animator.SetBool(RunBoolHash, true);
         }
         else
         {
-            _animator.SetBool("isRunning", false);
+            _animator.SetBool(RunBoolHash, false);
         }
 
         if (_rigidBody2d.velocity.x< 0)
@@ -50,7 +56,7 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.W))
         {
             _rigidBody2d.AddForce(transform.up * _jumpStrength, ForceMode2D.Impulse);
-            _animator.SetTrigger("Jump");
+            _animator.SetTrigger(JumpTriggerHash);
         }
     }
 

@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour
     private int _health = 5;
     private Coroutine _controlMovement;
     [SerializeField] private bool _isMovingRight = true;
+    private WaitForSeconds _changeDirectionInterval = new WaitForSeconds(2);
 
     private void Start()
     {
@@ -31,9 +32,9 @@ public class Enemy : MonoBehaviour
         while (_health > 0)
         {
             _isMovingRight = true;
-            yield return new WaitForSeconds(2);
+            yield return _changeDirectionInterval;
             _isMovingRight = false;
-            yield return new WaitForSeconds(2);
+            yield return _changeDirectionInterval;
         }
     }
 }
