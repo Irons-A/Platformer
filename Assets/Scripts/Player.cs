@@ -4,18 +4,19 @@ using TMPro;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(SpriteRenderer))]
 
 public class Player : MonoBehaviour
 {
     private Rigidbody2D _rigidBody2d;
     private Animator _animator;
     private SpriteRenderer _spriterenderer;
-    [SerializeField] private int _coins;
     private float _speed = 5f;
     private float _jumpStrength = 8f;
     private float _runningAnimationThreshhold = 0.02f;
-    private int RunBoolHash = Animator.StringToHash("isRunning");
-    private int JumpTriggerHash = Animator.StringToHash("Jump");
+    private int _runBoolHash = Animator.StringToHash("isRunning");
+    private int _jumpTriggerHash = Animator.StringToHash("Jump");
 
 
     private void Start()
@@ -37,11 +38,11 @@ public class Player : MonoBehaviour
 
         if (_rigidBody2d.velocity.magnitude > _runningAnimationThreshhold)
         {
-            _animator.SetBool(RunBoolHash, true);
+            _animator.SetBool(_runBoolHash, true);
         }
         else
         {
-            _animator.SetBool(RunBoolHash, false);
+            _animator.SetBool(_runBoolHash, false);
         }
 
         if (_rigidBody2d.velocity.x< 0)
@@ -56,9 +57,14 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.W))
         {
             _rigidBody2d.AddForce(transform.up * _jumpStrength, ForceMode2D.Impulse);
-            _animator.SetTrigger(JumpTriggerHash);
+            _animator.SetTrigger(_jumpTriggerHash);
         }
     }
+}
+
+public class Wallet : MonoBehaviour
+{
+    [SerializeField] private int _coins;
 
     public void CollectCoin(int value)
     {
