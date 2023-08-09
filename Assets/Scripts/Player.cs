@@ -36,23 +36,9 @@ public class Player : MonoBehaviour
     {
         _rigidBody2d.AddForce(transform.right * _speed * Input.GetAxis("Horizontal"), ForceMode2D.Force);
 
-        if (_rigidBody2d.velocity.magnitude > _runningAnimationThreshhold)
-        {
-            _animator.SetBool(_runBoolHash, true);
-        }
-        else
-        {
-            _animator.SetBool(_runBoolHash, false);
-        }
+        _animator.SetBool(_runBoolHash, _rigidBody2d.velocity.magnitude > _runningAnimationThreshhold);
 
-        if (_rigidBody2d.velocity.x< 0)
-        {
-            _spriterenderer.flipX = true;
-        }
-        else if (_rigidBody2d.velocity.x > 0)
-        {
-            _spriterenderer.flipX = false;
-        }
+        _spriterenderer.flipX = (_rigidBody2d.velocity.x == 0) ? _spriterenderer.flipX : (_rigidBody2d.velocity.x < 0);
 
         if (Input.GetKeyDown(KeyCode.W))
         {
