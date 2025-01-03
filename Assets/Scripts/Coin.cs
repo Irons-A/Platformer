@@ -1,17 +1,16 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
-    [SerializeField] private int _value = 10;
+    public event Action<Coin> IsCollected;
 
-    private void OnTriggerEnter2D(Collider2D other)
+    [SerializeField] public int value { get; private set; } = 10;
+
+    public void MarkAsCollected()
     {
-        if (other.TryGetComponent<PlayerVariablesHandler>(out PlayerVariablesHandler pvh))
-        {
-            pvh.AddScore(_value);
-            Destroy(gameObject);
-        }
+        IsCollected?.Invoke(this);
     }
 }

@@ -3,11 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(PlayerVariablesHandler))]
+[RequireComponent(typeof(PlayerWallet))]
 [RequireComponent(typeof(Rigidbody2D))]
-public class PlayerController : MonoBehaviour
+[RequireComponent(typeof(Animator))]
+public class PlayerMover : MonoBehaviour
 {
     public const KeyCode JumpKey = KeyCode.UpArrow;
+    public const string HorizontalAxis = "Horizontal";
+
+    public readonly int MoveSpeed = Animator.StringToHash(nameof(MoveSpeed));
 
     [SerializeField] private float _movementSpeed = 6f;
     [SerializeField] private float _jumpHeight = 14f;
@@ -16,6 +20,8 @@ public class PlayerController : MonoBehaviour
     private SpriteRenderer _theSR;
     private Animator _animator;
     private bool _isGrounded = true;
+    private float _movementAxisInputValue;
+    private bool _isJumping;
     
     private float _movementVelocity;
 
@@ -28,21 +34,35 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        _movementAxisInputValue = Input.GetAxis(HorizontalAxis);
+
+        if (Input.GetKeyDown(JumpKey) && _isGrounded)
+        {
+            _isJumping = true;
+        }
+        else
+        {
+            _isJumping = false;
+        }
+
         ProcessAnimations();
+    }
+
+    private void FixedUpdate()
+    {
         Move();
         Jump();
     }
 
     private void Move()
     {
-        float moveInput = Input.GetAxis("Horizontal");
-        _theRB.velocity = new Vector2(moveInput * _movementSpeed, _theRB.velocity.y);
+        _theRB.velocity = new Vector2(_movementAxisInputValue * _movementSpeed, _theRB.velocity.y);
 
-        if (moveInput > 0)
+        if (_movementAxisInputValue > 0)
         {
             _theSR.flipX = false;
         }
-        else if (moveInput < 0)
+        else if (_movementAxisInputValue < 0)
         {
             _theSR.flipX = true;
         }
@@ -50,7 +70,7 @@ public class PlayerController : MonoBehaviour
 
     private void Jump()
     {
-        if (Input.GetKeyDown(JumpKey) && _isGrounded)
+        if (_isJumping)
         {
             _theRB.velocity = new Vector2(_theRB.velocity.x, _jumpHeight);
             _isGrounded = false;
@@ -59,7 +79,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.CompareTag("Solid"))
+        if (collision.collider.TryGetComponent<SolidObject>(out _))
         {
             _isGrounded = true;
         }
@@ -67,7 +87,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.collider.CompareTag("Solid"))
+        if (collision.collider.TryGetComponent<SolidObject>(out _))
         {
             _isGrounded = false;
         }
@@ -76,6 +96,6 @@ public class PlayerController : MonoBehaviour
     private void ProcessAnimations()
     {
         _movementVelocity = Math.Abs(_theRB.velocity.x);
-        _animator.SetFloat("MoveSpeed", _movementVelocity);
+        _animator.SetFloat(MoveSpeed, _movementVelocity);
     }
 }

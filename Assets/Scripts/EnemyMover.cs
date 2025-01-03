@@ -2,20 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMovement : MonoBehaviour
+[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(SpriteRenderer))]
+public class EnemyMover : MonoBehaviour
 {
     [SerializeField] private float _movementSpeed = 3f;
     [SerializeField] private Transform _leftBorder;
     [SerializeField] private Transform _rightBorder;
 
     private bool _isMovingRight = true;
-    private Rigidbody2D _theRB;
-    private SpriteRenderer _theSR;
+    private Rigidbody2D _rigidbody;
+    private SpriteRenderer _sprireRenderer;
 
     private void Awake()
     {
-        _theRB = GetComponent<Rigidbody2D>();
-        _theSR = GetComponent<SpriteRenderer>();
+        _rigidbody = GetComponent<Rigidbody2D>();
+        _sprireRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void Update()
@@ -31,13 +33,13 @@ public class EnemyMovement : MonoBehaviour
 
         if (_isMovingRight)
         {
-            _theRB.velocity = new Vector2(_movementSpeed, _theRB.velocity.y);
-            _theSR.flipX = true;
+            _rigidbody.velocity = new Vector2(_movementSpeed, _rigidbody.velocity.y);
+            _sprireRenderer.flipX = true;
         }
         else
         {
-            _theRB.velocity = new Vector2(-_movementSpeed, _theRB.velocity.y);
-            _theSR.flipX = false;
+            _rigidbody.velocity = new Vector2(-_movementSpeed, _rigidbody.velocity.y);
+            _sprireRenderer.flipX = false;
         }
     }
 }
