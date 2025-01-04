@@ -9,7 +9,7 @@ public class PlayerWallet : MonoBehaviour
     {
         if (other.TryGetComponent(out Coin coin))
         {
-            _score += coin._value;
+            _score += coin.Value;
             coin.MarkAsCollected();
         }
     }

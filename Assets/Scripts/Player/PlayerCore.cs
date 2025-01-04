@@ -3,9 +3,10 @@ using UnityEngine;
 [RequireComponent(typeof(PlayerWallet))]
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Animator))]
-[RequireComponent(typeof(PlayerCollisionsChecker))]
+[RequireComponent(typeof(PlayerGroundChecker))]
 [RequireComponent(typeof(PlayerInput))]
 [RequireComponent(typeof(PlayerAnimator))]
+[RequireComponent(typeof(PlayerFlipper))]
 public class PlayerCore : MonoBehaviour
 {
     [SerializeField] private float _movementSpeed = 6f;
@@ -28,12 +29,12 @@ public class PlayerCore : MonoBehaviour
 
     private void Move()
     {
-        _rigidbody.velocity = new Vector2(_playerInput._movementAxisInputValue * _movementSpeed, _rigidbody.velocity.y);
+        _rigidbody.velocity = new Vector2(_playerInput.DirectionX * _movementSpeed, _rigidbody.velocity.y);
     }
 
     private void Jump()
     {
-        if (_playerInput._isJumping)
+        if (_playerInput.IsJumping)
         {
             _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, _jumpHeight);
         }

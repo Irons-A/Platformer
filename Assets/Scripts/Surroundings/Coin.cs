@@ -5,7 +5,7 @@ public class Coin : MonoBehaviour
 {
     public event Action<Coin> IsCollected;
 
-    [SerializeField] public int _value { get; private set; } = 10;
+    [SerializeField] public int Value { get; private set; } = 10;
 
     public void MarkAsCollected()
     {
