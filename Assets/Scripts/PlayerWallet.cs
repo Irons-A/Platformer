@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(BoxCollider2D))]
@@ -11,7 +9,7 @@ public class PlayerWallet : MonoBehaviour
     {
         if (other.TryGetComponent(out Coin coin))
         {
-            _score += coin.value;
+            _score += coin._value;
             coin.MarkAsCollected();
         }
     }
