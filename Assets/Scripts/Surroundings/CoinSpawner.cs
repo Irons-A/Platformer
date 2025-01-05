@@ -9,6 +9,11 @@ public class CoinSpawner : MonoBehaviour
 
     private WaitForSeconds _delay;
 
+    private void Start()
+    {
+        _delay = new WaitForSeconds(_respawnFrequency);
+    }
+
     private void OnEnable()
     {
         foreach (var item in _coins)
@@ -32,8 +37,6 @@ public class CoinSpawner : MonoBehaviour
 
     private IEnumerator CoinRespawnRoutine(Coin coin)
     {
-        _delay = new WaitForSeconds(_respawnFrequency);
-
         coin.gameObject.SetActive(false);
 
         yield return _delay;

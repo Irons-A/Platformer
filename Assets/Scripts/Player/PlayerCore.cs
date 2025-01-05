@@ -3,10 +3,12 @@ using UnityEngine;
 [RequireComponent(typeof(PlayerWallet))]
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Animator))]
-[RequireComponent(typeof(PlayerGroundChecker))]
+[RequireComponent(typeof(PlayerCollisionsChecker))]
 [RequireComponent(typeof(PlayerInput))]
 [RequireComponent(typeof(PlayerAnimator))]
 [RequireComponent(typeof(PlayerFlipper))]
+[RequireComponent(typeof(PlayerHealth))]
+[RequireComponent(typeof(PlayerAttacker))]
 public class PlayerCore : MonoBehaviour
 {
     [SerializeField] private float _movementSpeed = 6f;
