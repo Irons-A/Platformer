@@ -1,7 +1,10 @@
+using Unity.Burst.CompilerServices;
 using UnityEngine;
 
 public class EnemyCollisionsChecker : MonoBehaviour
 {
+    public const int PlayerLayerMask = 1 << 6;
+
     private EnemyHealth _enemyHealth;
     private EnemyMover _enemyMover;
 
@@ -15,7 +18,7 @@ public class EnemyCollisionsChecker : MonoBehaviour
 
     private void FixedUpdate()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.right, _sightLength);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.right, _sightLength, PlayerLayerMask);
 
         if (hit.collider.TryGetComponent<PlayerCore>(out _))
         {
