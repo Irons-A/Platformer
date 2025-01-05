@@ -1,14 +1,11 @@
-using Unity.Burst.CompilerServices;
 using UnityEngine;
 
 public class EnemyCollisionsChecker : MonoBehaviour
 {
-    public const int PlayerLayerMask = 1 << 6;
+    [SerializeField] private float _sightLength = 150f;
 
     private EnemyHealth _enemyHealth;
     private EnemyMover _enemyMover;
-
-    [SerializeField] private float _sightLength = 150f;
 
     private void Awake()
     {
@@ -18,17 +15,20 @@ public class EnemyCollisionsChecker : MonoBehaviour
 
     private void FixedUpdate()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.right, _sightLength, PlayerLayerMask);
+        RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, transform.right, _sightLength);
 
-        if (hit.collider.TryGetComponent<PlayerCore>(out _))
+        foreach (RaycastHit2D hit in hits)
         {
-            _enemyMover.SetStateOfSight(true);
+            if (hit.collider.TryGetComponent<PlayerCore>(out _))
+            {
+                _enemyMover.SetStateOfSight(true);
 
-            Debug.Log("Has Sight");
-        }
-        else
-        {
-            _enemyMover.SetStateOfSight(false);
+                return;
+            }
+            else
+            {
+                _enemyMover.SetStateOfSight(false);
+            }
         }
 
         Debug.DrawRay(transform.position, transform.right * _sightLength, Color.red);
