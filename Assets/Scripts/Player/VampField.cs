@@ -67,7 +67,7 @@ public class VampField : MonoBehaviour
         {
             float distance = Vector3.Distance(transform.position, hit.transform.position);
 
-            if (hit.TryGetComponent(out EnemyHealth enemy) && distance < closestDistance)
+            if (hit.gameObject.TryGetComponent(out EnemyHealth enemy) && distance < closestDistance)
             {
                 closestDistance = distance;
                 closestEnemy = enemy;
