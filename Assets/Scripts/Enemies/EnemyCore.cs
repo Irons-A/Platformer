@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(EnemyHealth))]
 [RequireComponent(typeof(EnemyFlipper))]
 [RequireComponent(typeof(EnemyCollisionsChecker))]
-public class EnemyMover : MonoBehaviour
+public class EnemyCore : MonoBehaviour
 {
     [SerializeField] private float _movementSpeed = 3f;
     [SerializeField] private float _chasingSpeed = 5f;

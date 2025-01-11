@@ -5,12 +5,12 @@ public class EnemyCollisionsChecker : MonoBehaviour
     [SerializeField] private float _sightLength = 150f;
 
     private EnemyHealth _enemyHealth;
-    private EnemyMover _enemyMover;
+    private EnemyCore _enemyMover;
 
     private void Awake()
     {
         _enemyHealth = GetComponent<EnemyHealth>();
-        _enemyMover = GetComponent<EnemyMover>();
+        _enemyMover = GetComponent<EnemyCore>();
 
         transform.rotation = Quaternion.Euler(5, 5, 5);
     }
