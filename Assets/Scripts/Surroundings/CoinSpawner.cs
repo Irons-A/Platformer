@@ -9,7 +9,7 @@ public class CoinSpawner : MonoBehaviour
 
     private WaitForSeconds _delay;
 
-    private void Start()
+    private void Awake()
     {
         _delay = new WaitForSeconds(_respawnFrequency);
     }

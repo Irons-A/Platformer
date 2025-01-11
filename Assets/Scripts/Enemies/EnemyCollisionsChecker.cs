@@ -11,6 +11,8 @@ public class EnemyCollisionsChecker : MonoBehaviour
     {
         _enemyHealth = GetComponent<EnemyHealth>();
         _enemyMover = GetComponent<EnemyMover>();
+
+        transform.rotation = Quaternion.Euler(5, 5, 5);
     }
 
     private void FixedUpdate()
@@ -36,7 +38,7 @@ public class EnemyCollisionsChecker : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.TryGetComponent(out Damager damager) && damager.IsAlly == true)
+        if (collision.collider.TryGetComponent(out Damager damager) && damager.IsAlly)
         {
             _enemyHealth.TakeDamage(damager.Damage);
         }
@@ -44,7 +46,7 @@ public class EnemyCollisionsChecker : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.TryGetComponent(out Damager damager) && damager.IsAlly == true)
+        if (collision.TryGetComponent(out Damager damager) && damager.IsAlly)
         {
             _enemyHealth.TakeDamage(damager.Damage);
         }
