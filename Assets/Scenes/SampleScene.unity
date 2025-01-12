@@ -240,7 +240,6 @@ Transform:
   m_Children:
   - {fileID: 328553167}
   - {fileID: 223815997}
-  - {fileID: 1605115045}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &116553754
@@ -4141,13 +4140,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1605115044}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.31, y: 2.22, z: 0}
+  m_LocalScale: {x: 6, y: 6, z: 6}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 762954727}
-  m_Father: {fileID: 116553753}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1605115046
 MonoBehaviour:
@@ -4161,6 +4160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 813a0aa11d3dc9546954803aeb557da4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _searchRadius: 6
   _recievedHealth: 1
   _dealtDamage: 1
   _triggeringFrequency: 1
@@ -4170,6 +4170,7 @@ MonoBehaviour:
   _userHealth: {fileID: 116553763}
   _statusBar: {fileID: 300169163}
   _vampField: {fileID: 762954726}
+  _user: {fileID: 116553750}
 --- !u!1 &1617699222
 GameObject:
   m_ObjectHideFlags: 0
@@ -5417,6 +5418,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 1970470837}
+  - {fileID: 1605115045}
   - {fileID: 116553753}
   - {fileID: 513838004}
   - {fileID: 6802943606857288310}

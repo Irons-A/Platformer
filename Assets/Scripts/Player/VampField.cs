@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class VampField : MonoBehaviour
 {
+    [SerializeField] private float _searchRadius = 2;
     [SerializeField] private float _recievedHealth = 1;
     [SerializeField] private float _dealtDamage = 1;
     [SerializeField] private float _triggeringFrequency = 1;
@@ -14,16 +15,11 @@ public class VampField : MonoBehaviour
     [SerializeField] private BaseHealth _userHealth;
     [SerializeField] private Slider _statusBar;
     [SerializeField] private GameObject _vampField;
+    [SerializeField] private GameObject _user;
 
     private WaitForSeconds _timeMeasurementUnit;
     private bool _isFieldReady = true;
-    private float _searchRadius;
     private Coroutine _currentRoutine;
-
-    private void Awake()
-    {
-        _searchRadius = _vampField.GetComponent<CircleCollider2D>().radius;
-    }
 
     private void OnEnable()
     {
@@ -38,6 +34,11 @@ public class VampField : MonoBehaviour
     private void Start()
     {
         _timeMeasurementUnit = new WaitForSeconds (_triggeringFrequency);
+    }
+
+    private void Update()
+    {
+        transform.position = _user.transform.position;
     }
 
     private void ActivateVampField()
@@ -58,12 +59,12 @@ public class VampField : MonoBehaviour
 
     private EnemyHealth ScanForTargets()
     {
-        Collider[] hits = Physics.OverlapSphere(transform.position, _searchRadius);
+        Collider2D[] hits = Physics2D.OverlapCircleAll(new Vector2(transform.position.x, transform.position.y), _searchRadius);
 
         EnemyHealth closestEnemy = null;
         float closestDistance = Mathf.Infinity;
 
-        foreach (Collider hit in hits)
+        foreach (Collider2D hit in hits)
         {
             float distance = Vector3.Distance(transform.position, hit.transform.position);
 
